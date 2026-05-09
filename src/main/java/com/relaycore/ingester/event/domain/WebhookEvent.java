@@ -35,7 +35,6 @@ public class WebhookEvent {
     private String eventType;
 
     @JdbcTypeCode(SqlTypes.JSON)
-    @Column(columnDefinition = "jsonb")
     private String payload;
 
     private String signature;
