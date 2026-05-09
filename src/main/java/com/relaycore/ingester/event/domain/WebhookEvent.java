@@ -12,6 +12,8 @@ import java.util.UUID;
 @Entity
 @Table(name = "webhook_events", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"source", "external_event_id"})
+}, indexes = {
+    @Index(name = "idx_webhook_events_query", columnList = "source, status, received_at")
 })
 @Getter
 @Setter

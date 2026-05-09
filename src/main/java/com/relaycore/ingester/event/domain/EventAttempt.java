@@ -8,7 +8,9 @@ import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "event_attempts")
+@Table(name = "event_attempts", indexes = {
+    @Index(name = "idx_event_attempts_event_id", columnList = "event_id")
+})
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
