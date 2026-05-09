@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: ingester
+  profiles:
+    active: dev
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+    serialization:
+      write-dates-as-timestamps: false
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    com.relaycore.ingester: DEBUG
