@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit;
 @Component
 @RequiredArgsConstructor
 @Slf4j
+@org.springframework.boot.autoconfigure.condition.ConditionalOnProperty(name = "app.worker.enabled", havingValue = "true", matchIfMissing = true)
 public class EventWorker {
 
     private final StringRedisTemplate redisTemplate;
